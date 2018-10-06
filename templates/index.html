@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="refresh" content="6">
+	<title>Example</title>
+</head>
+<body>
+	<table border="5px" cellpadding="30px" cellspacing="30px">
+		<tr>
+			<th> Image </th>
+			<th> Name </th>
+			<th> Time </th>
+		</tr>
+
+		{% for i in ptr %}
+		<tr>
+			<td> <img src = "{{ filename[i] }}" width="100px" height="100px"> </td>
+			<td> <h3> {{ names[i] }} </h3> </td>
+			<td> <h3> {{ time[i] }} </h3> </td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
