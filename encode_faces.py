@@ -43,6 +43,8 @@ for (i, imagePath) in enumerate(imagePaths):
 	# corresponding to each face in the input image
 	boxes = face_recognition.face_locations(rgb,
 		model=args["detection_method"])
+	
+	print(boxes)
 
 	# compute the facial embedding for the face
 	encodings = face_recognition.face_encodings(rgb, boxes)
@@ -60,3 +62,5 @@ data = {"encodings": knownEncodings, "names": knownNames}
 f = open(args["encodings"], "wb")
 f.write(pickle.dumps(data))
 f.close()
+if f:
+	print(f)
